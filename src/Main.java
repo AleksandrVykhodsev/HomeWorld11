@@ -19,11 +19,11 @@ public class Main {
     }
     public static int days (int deliveryDistance){ //Задание 3
         int days = 1;
-        if (deliveryDistance > 20){
-            days++;
+        if (deliveryDistance <= 20){
+            days = days;
         }
-        if (deliveryDistance > 60){
-            days++;
+        if (deliveryDistance > 20){
+            days = (deliveryDistance - 20) / 40 + 2;
         }
         return days;
     }
@@ -46,7 +46,7 @@ public class Main {
         //Задание 3
 
         System.out.println("Задание 3!!!");
-        int deliveryDistance = 95;
+        int deliveryDistance = 29800;
 
         int totalDays = days(deliveryDistance);
         System.out.println("Потребуется дней для доставки " + totalDays);
